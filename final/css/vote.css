@@ -1,0 +1,41 @@
+.votes_main {
+    margin: 10px auto;
+    overflow: hidden;
+    width: 450px;
+}
+.votes_gray {
+    background-image: url("../images/star_gray.png");
+    float: left;
+    height: 64px;
+    position: relative;
+}
+.votes_active {
+    background-image: url("../images/star.png");
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.votes_buttons {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.votes_button {
+    border: medium none;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    width: 64px;
+}
+.votes_main span {
+    color: #333333;
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 64px;
+    margin-left: 10px;
+}

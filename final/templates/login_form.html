@@ -1,0 +1,63 @@
+﻿<div class="column">
+
+    <div class="tabs_container">
+        <ul class="tabs">
+            <li class="active"><h3>Log In</h3></li>
+            <li><h3>Join</h3></li>
+        </ul>
+    </div>
+
+    <div class="nav_container">
+        <form class="login_form" action="index.php" method="post" id="1">
+            <label>Username:</label><input type="text" name="username">
+            <label>Password:</label><input type="password" name="password">
+            <input type="submit" name="Login" value="Login">
+        </form>
+        <form class="join_form" action="index.php" method="post" id="2" style="display: none;">
+
+            <label>Full name:</label>
+            <input type="text" id="username" name="username" placeholder="Your name" maxlength="128" title="Your name" required>
+
+            <label>First name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Your first name" maxlength="128" title="Your first name">
+
+            <label>Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Your last name" maxlength="128" title="Your last name">
+
+            <label>Email:</label>
+            <input type="text" id="email" name="email" placeholder="Your email" maxlength="128" title="Format: *@gmail.com" pattern=".*@gmail\.com" required>
+
+            <label>Password:</label>
+            <input type="text" id="password" name="password" maxlength="128" title="Password" required>
+
+            <label>Repeat Password:</label>
+            <input type="text" id="password" name="password" maxlength="128" title="Repeat password" required oninput="checkpass(this)">
+
+            <input type="submit" name="Join" value="Join">
+        </form>
+    </div>
+
+    
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.tabs li h3').click(function () {
+      $('.tabs li').removeClass('active');
+      $(this).parent().addClass('active');
+
+      $('.nav_container form').hide();
+      var index = $('.tabs li h3').index(this);
+      $('.nav_container form').eq(index).show();
+      return false;
+    });
+});
+
+function checkpass(input) {
+    if (input.value != document.getElementById('password').value) {
+        input.setCustomValidity('Password must match.');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+</script>

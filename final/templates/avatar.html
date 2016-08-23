@@ -1,0 +1,22 @@
+<div class="clear"></div>
+<hr />
+<h2>My avatar</h2>
+<div class="column">
+    <div class="profiles">
+        <div title="{name}">
+            <a href="profile.php?id={id}">
+                <img alt="{name}" src="{image}" />
+                <p>{name}</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <form id="wrapper" target="upload_result" method="POST" action="index.php" enctype="multipart/form-data">
+        <input id="avatar" type="file" name="avatar">
+        <input type="hidden" name="action" value="add_avatar">
+        <input id="submit" type="submit" value="Upload" name="submit">
+    </form>
+    <iframe name="upload_result" class="avatar_iframe">
+    </iframe>
+</div>

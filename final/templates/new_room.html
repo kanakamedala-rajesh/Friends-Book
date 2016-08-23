@@ -1,0 +1,11 @@
+<form class="new_room_form" method="post">
+    <div><input type="text" name="title" /><input type="submit" value="Add room" name="submit" /></div>
+    <input type="hidden" name="action" value="add_room" />
+</form>
+<form class="delete_room_form" method="post">
+    <input type="submit" value="Delete current room" name="submit" />
+    <input type="hidden" name="room_id" value="{room}" />
+    <input type="hidden" name="action" value="delete_room" />
+</form>
+<div class="clear"></div>
+<br /><hr />

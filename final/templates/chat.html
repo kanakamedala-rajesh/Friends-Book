@@ -1,0 +1,13 @@
+<form class="chat_submit_form">
+    <div><input type="text" name="message" /><input type="submit" value="Submit" name="Submit" /></div>
+    <div>
+        <h3 class="error">Some error occurs during sending message</h3>
+        <h3 class="success">Message successfully sent</h3>
+        <h3 class="protect">Please wait 5 secs before adding next message</h3>
+    </div>
+    <input type="hidden" name="room" value="{room}" />
+</form>
+<script>
+    var iRoom = {room};
+</script>
+<script src="js/chat.js"></script>

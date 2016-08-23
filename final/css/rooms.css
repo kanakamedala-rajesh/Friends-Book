@@ -1,0 +1,104 @@
+.roomsHolder {
+    font: bold 12px/35px verdana;
+    overflow: hidden;
+    position: relative;
+}
+.roomsHolder .shadow {
+    background-color: #888888;
+    height: 8px;
+    left: 5%;
+    position: absolute;
+    top: -9px;
+    width: 90%;
+
+    /* css3 box shadow */
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    -o-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+ul.rooms {
+    display: block;
+    float: right;
+    height: 70px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 60px;
+    position: relative;
+}
+ul.rooms li {
+    float: left;
+    margin: 0 5px 0 0;
+}
+ul.rooms li a {
+    color: #DDDDDD;
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+
+    /* css3 box shadow */
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
+        /* css radius */
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+
+        /* css3 transition */
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+ul.rooms li a.red {
+    background-color:#a00;
+}
+ul.rooms li a.orange {
+    background-color:#da0;
+}
+ul.rooms li a.green {
+    background-color:#060;
+}
+ul.rooms li a.blue {
+    background-color:#00a;
+}
+ul.rooms li a.indigo {
+    background-color:#2b0062;
+}
+ul.rooms li a.violet {
+    background-color:#682bc2;
+}
+ul.rooms li a:hover, ul.rooms li a.active {
+    background:#aaa;
+    color:#fff;
+    padding:10px 10px 0 10px;
+}
+ul.rooms li a.red:hover, ul.rooms li a.red.active {
+    background-color:#c00;
+}
+ul.rooms li a.orange:hover, ul.rooms li a.orange.active {
+    background-color:#fc0;
+}
+ul.rooms li a.green:hover, ul.rooms li a.green.active {
+    background-color:#080;
+}
+ul.rooms li a.blue:hover, ul.rooms li a.blue.active {
+    background-color:#00c;
+}
+ul.rooms li a.indigo:hover, ul.rooms li a.indigo.active {
+    background-color:#5b1092;
+}
+ul.rooms li a.violet:hover, ul.rooms li a.violet.active {
+    background-color:#8a2be2;
+}
+.new_room_form {
+    float: left;
+}
+.delete_room_form {
+    float: right;
+}

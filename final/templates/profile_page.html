@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Powerful Chat System - Lesson 9</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/customizer.js"></script>
+
+    <style>
+        .container {
+            {custom_styles}
+        }
+    </style>
+</head>
+<body>
+    <div class="clear"></div>
+    <div class="container">
+        <div class="column">
+            <h3>Name: {name}</h3>
+            <h3>First name: {fname}</h3>
+            <h3>Last name: {lname}</h3>
+            <h3>About: {about}</h3>
+            <h3>Date Reg: {datereg}</h3>
+            <h3>Role: {role}</h3>
+            <h3>Avatar: <img src="{avatar}" style="vertical-align:middle" /></h3>
+        </div>
+        <div class="column">
+            <p><a href="index.php">Back to chat</a>
+                {actions}
+            </p>
+            
+        </div>
+    </div>
+    {rate}
+    <div class="container" {cust_visible}>
+        <h2>You can customize your profile page</h2>
+        <div class="column">
+            <canvas id="color_canvas" width="370" height="60"></canvas>
+        </div>
+        <div class="column">
+            <div class="customizer_buttons">
+                <div id="preview"></div>
+            </div>
+
+            <form action="profile.php" method="GET" target="change_color_result">
+                <input type="hidden" value="{id}" name="id">
+                <input type="hidden" value="color" name="color" id="color">
+                <input type="hidden" value="change_color" name="action">
+                <input id="submit" type="submit" name="submit" value="Apply">
+            </form>
+            <iframe class="avatar_iframe" name="change_color_result"></iframe>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div>
+            <h2>Online Members Block</h2>
+            {online_members}
+        </div>
+        <div>
+            <h2>Last Members</h2>
+            {profiles}
+        </div>
+    </div>
+
+   
+
+</body>
+</html>
